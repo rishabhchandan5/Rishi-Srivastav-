@@ -1,37 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RoboHouse - Robotics, Arduino, Electronics and Automation Projects">
 <title>RoboHouse | Robotics & Innovation</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:#080d18;color:#f5f7ff;line-height:1.6}
-header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:#101a2c;position:sticky;top:0;z-index:10}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:#101a2c;position:sticky;top:0;z-index:10;border-bottom:1px solid #26354d}
 .logo{font-size:25px;font-weight:bold;color:#36c5ff}
 nav a{color:white;text-decoration:none;margin-left:17px;font-size:14px}
-.hero{text-align:center;padding:90px 20px 75px;background:linear-gradient(135deg,#101d38,#07101f)}
-.hero h1{font-size:clamp(36px,7vw,60px);line-height:1.15;margin-bottom:20px}
+nav a:hover{color:#38c8ff}
+.hero{text-align:center;padding:95px 20px 85px;background:linear-gradient(135deg,#101d38,#07101f)}
+.hero h1{font-size:clamp(36px,7vw,60px);line-height:1.2;margin-bottom:20px}
 .hero h1 span{color:#38c8ff}
 .hero p{color:#b9c7df;max-width:650px;margin:0 auto 28px}
-.btn{display:inline-block;padding:13px 23px;border-radius:8px;background:#19a9ed;color:white;text-decoration:none;font-weight:bold;margin:5px}
+.btn{display:inline-block;padding:13px 23px;border-radius:8px;background:#19a9ed;color:white;text-decoration:none;font-weight:bold;margin:5px;border:0;cursor:pointer}
 .btn.secondary{background:transparent;border:1px solid #38c8ff}
 section{padding:65px 7%}
 .heading{text-align:center;font-size:32px;margin-bottom:12px}
 .sub{text-align:center;color:#9eacc4;margin-bottom:35px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#121e32;border:1px solid #243651;border-radius:15px;padding:25px}
-.card .emoji{font-size:38px}
+.card{background:#121e32;border:1px solid #243651;border-radius:15px;padding:25px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#38c8ff}
+.card .emoji{font-size:42px}
 .card h3{color:#42caff;margin:12px 0}
 .card p{color:#b8c5d9;font-size:14px}
 .about{text-align:center;background:#101a2b}
 .about p{max-width:750px;margin:15px auto;color:#bac6d9}
-form{max-width:600px;margin:auto;background:#121e32;padding:25px;border-radius:15px}
+form{max-width:600px;margin:auto;background:#121e32;padding:25px;border-radius:15px;border:1px solid #243651}
+label{display:block;color:#dce7fa;margin-top:8px}
 input,textarea,select{width:100%;padding:13px;margin:8px 0 15px;background:#081324;border:1px solid #34445d;border-radius:7px;color:white;font-size:15px}
-textarea{min-height:110px}
-button{border:0;cursor:pointer;width:100%;font-size:16px}
-footer{text-align:center;padding:25px;background:#050914;color:#9eacc4}
+textarea{min-height:110px;resize:vertical}
+button{font-size:16px}
+.contact{text-align:center;background:#101a2b}
+footer{text-align:center;padding:28px;background:#050914;color:#9eacc4}
+.whatsapp{position:fixed;bottom:20px;right:18px;background:#25D366;color:white;text-decoration:none;padding:13px 18px;border-radius:40px;font-weight:bold;z-index:20;box-shadow:0 4px 15px #0008}
 @media(max-width:600px){
 header{padding:14px 4%;flex-wrap:wrap;gap:10px}
 nav{width:100%;display:flex;justify-content:space-between}
@@ -40,6 +48,7 @@ section{padding:50px 5%}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -54,7 +63,7 @@ section{padding:50px 5%}
 
 <div class="hero" id="home">
 <h1>Build The <span>Future</span><br>With Robotics</h1>
-<p>Welcome to RoboHouse! Explore innovative robotics, Arduino projects, automation systems and smart technology solutions.</p>
+<p>Explore innovative robotics, Arduino projects, automation systems and smart technology solutions with RoboHouse.</p>
 <a class="btn" href="#projects">Explore Projects</a>
 <a class="btn secondary" href="#booking">Book a Project</a>
 </div>
@@ -62,69 +71,88 @@ section{padding:50px 5%}
 <section id="projects">
 <h2 class="heading">Our Projects</h2>
 <p class="sub">Explore technology, creativity and innovation.</p>
+
 <div class="grid">
 <div class="card">
 <div class="emoji">🚗</div>
 <h3>Robotics Car</h3>
-<p>Smart robotic cars with manual mobile control and automatic operation.</p>
+<p>Smart robotic cars with mobile control and automatic operation.</p>
 </div>
+
 <div class="card">
 <div class="emoji">🦾</div>
 <h3>Robotic Arm</h3>
 <p>Robotic arm systems for object handling and automation experiments.</p>
 </div>
+
 <div class="card">
 <div class="emoji">📡</div>
 <h3>Home Automation</h3>
-<p>Control electrical appliances using smart technology and automation.</p>
+<p>Control electrical appliances using smart technology.</p>
 </div>
+
 <div class="card">
 <div class="emoji">🚨</div>
 <h3>Smart Security</h3>
-<p>Sensor-based security and alert systems for smart environments.</p>
+<p>Sensor-based security and alert systems.</p>
 </div>
+
 <div class="card">
 <div class="emoji">🌱</div>
 <h3>Smart Agriculture</h3>
-<p>Automatic plant watering and soil moisture monitoring systems.</p>
+<p>Automatic plant watering and soil monitoring systems.</p>
 </div>
+
 <div class="card">
 <div class="emoji">⚡</div>
 <h3>Arduino Projects</h3>
-<p>Creative electronics, microcontroller and embedded system projects.</p>
+<p>Creative electronics, microcontroller and embedded projects.</p>
 </div>
 </div>
 </section>
 
 <section class="about" id="about">
 <h2 class="heading">About RoboHouse</h2>
-<p>RoboHouse is a robotics and innovation project platform focused on electronics, automation, Arduino and intelligent robotic systems.</p>
+<p>RoboHouse is a robotics and innovation platform focused on electronics, automation, Arduino and intelligent robotic systems.</p>
 <p>Our mission is to turn creative ideas into practical technology projects.</p>
 </section>
 
 <section id="booking">
 <h2 class="heading">Book Your Project</h2>
 <p class="sub">Tell us about your robotics or electronics project.</p>
+
 <form id="bookingForm">
 <label>Your Name</label>
 <input id="name" type="text" placeholder="Enter your name" required>
+
 <label>Phone Number</label>
 <input id="phone" type="tel" placeholder="Enter phone number" required>
+
 <label>Email</label>
 <input id="email" type="email" placeholder="Enter email address">
+
 <label>Select Project</label>
 <select id="project">
 <option>Robotics Car</option>
 <option>Robotic Arm</option>
 <option>Home Automation</option>
 <option>Smart Security</option>
+<option>Smart Agriculture</option>
 <option>Arduino Project</option>
 <option>Other</option>
 </select>
+
 <label>Project Requirements</label>
 <textarea id="details" placeholder="Describe your project..." required></textarea>
-<button class="btn" type="submit">Send Booking Enquiry</button>
+
+<button class="btn" type="submit">Send Booking Enquiry on WhatsApp</button>
 </form>
+</section>
+
+<section class="contact">
+<h2 class="heading">Contact RoboHouse</h2>
+<p class="sub">Have an idea? Let's build something amazing!</p>
+<a class="btn" href="https://wa.me/919120618728">Chat on WhatsApp</a>
 </section>
 
 <footer>
@@ -133,18 +161,33 @@ section{padding:50px 5%}
 <p>© 2026 RoboHouse. All Rights Reserved.</p>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/919120618728" target="_blank">💬 WhatsApp</a>
+
 <script>
+const whatsappNumber = "919120618728";
+
 document.getElementById("bookingForm").addEventListener("submit",function(e){
 e.preventDefault();
-const whatsappNumber="91XXXXXXXXXX";
-const message="Hello RoboHouse!%0AName: "+encodeURIComponent(document.getElementById("name").value)+"%0APhone: "+encodeURIComponent(document.getElementById("phone").value)+"%0AEmail: "+encodeURIComponent(document.getElementById("email").value)+"%0AProject: "+encodeURIComponent(document.getElementById("project").value)+"%0ADetails: "+encodeURIComponent(document.getElementById("details").value);
-if(whatsappNumber==="91XXXXXXXXXX"){
-alert("Please add your WhatsApp business number in the website code first.");
-return;
-}
+
+const name = document.getElementById("name").value.trim();
+const phone = document.getElementById("phone").value.trim();
+const email = document.getElementById("email").value.trim();
+const project = document.getElementById("project").value;
+const details = document.getElementById("details").value.trim();
+
+const message =
+"Hello RoboHouse! I want to book a project.%0A%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Phone: "+encodeURIComponent(phone)+"%0A"+
+"Email: "+encodeURIComponent(email)+"%0A"+
+"Project: "+encodeURIComponent(project)+"%0A"+
+"Requirements: "+encodeURIComponent(details);
+
 window.open("https://wa.me/"+whatsappNumber+"?text="+message,"_blank");
 });
 </script>
+
 </body>
 </html>
+
 
